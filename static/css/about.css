@@ -1,0 +1,47 @@
+/* Custom Theme Color Styling overrides */
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary-color: #764ba2;
+  --badge-bg: #eeeaf7;
+}
+
+/* Custom Hero Layout adjustment */
+.custom-hero {
+  background: var(--primary-gradient);
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Text and Headings */
+.custom-text-primary {
+  color: var(--primary-color);
+}
+
+/* Custom Skill Badges */
+.custom-badge {
+  background-color: var(--badge-bg);
+  color: var(--primary-color);
+  font-size: 0.85rem;
+}
+
+/* Custom Buttons */
+.custom-btn {
+  background-color: var(--primary-color);
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.custom-btn:hover {
+  background-color: #5a3682;
+  color: white;
+}
+
+/* Form input focus color matching our theme */
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(118, 75, 162, 0.25);
+}

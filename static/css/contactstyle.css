@@ -1,0 +1,114 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  margin: 0;
+  padding: 0;
+  background: #000;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(
+    -60deg,
+    rgb(204, 51, 51) 50%,
+    rgb(0, 0, 0) 50%
+  );
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+/* Base settings for the contact cards */
+.contact-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  /* Optional: Adds a very subtle border so the cards don't completely disappear on dark backgrounds */
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Hover effect tailored for white text / transparent background */
+.contact-card:hover {
+  transform: translateY(-3px);
+  /* Creates a slight glowing glass effect on hover */
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Smooth out the icon pop on hover */
+.contact-card .icon-box {
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover .icon-box {
+  transform: scale(1.05);
+}
+
+/* Icon box centering */
+.icon-box {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Form focus smooth glow effect */
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25px rgba(13, 110, 253, 0.25);
+}
+
+/* Custom transparent styles for the input boxes */
+.custom-contact-form .form-control {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Style for input text when typing */
+.custom-contact-form .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+}
+
+/* Fixes placeholder color styling */
+.custom-contact-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Ensure form labels are slightly softer than full white headers */
+.custom-contact-form .form-label {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}

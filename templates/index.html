@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Portfolio</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="templates" href="templates" />
+  </head>
+
+  <body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <header class="header">
+      <nav class="navbar navbar-expand-md w-100">
+        <a class="navbar-brand" href="#">
+          <img class="em" src="static/image/en.png" alt="" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#menu"
+        >
+          ☰
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="menu">
+          <div class="navbar-nav">
+            <a href="#home" class="btn btn-dark m-1">HOME</a>
+            <a href="#resume" class="btn btn-dark m-1">RESUME</a>
+            <a href="#about-me" class="btn btn-dark m-1">ABOUT ME</a>
+            <a href="{{ url_for('contact') }}" class="btn btn-dark m-1"
+              >CONTACT</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-md-12 hero-text">
+            <h3>Hello, My Name Is</h3>
+
+            <h1>ROBERTO VILLAMER</h1>
+
+            <p>
+              A passionate and dedicated junior web developer, driven by
+              technology and limitless possibilities.
+            </p>
+
+            <button class="btn contact-btn">Contact me</button>
+          </div>
+
+          <!-- Right -->
+          <div class="col-lg-6 col-md-12">
+            <div class="image-box">
+              <img
+                src="static/image/me.png"
+                class="hero-image default-img"
+                alt="My Profile Image"
+              />
+              <img
+                src="static/image/meflash.png"
+                class="hero-image hover-img"
+                alt="My Hover Image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about-me" class="about-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left image -->
+
+          <div class="col-lg-5 col-md-12 text-center">
+            <div class="about-image-box">
+              <img src="static/image/mee.png" class="about-image" alt="" />
+            </div>
+          </div>
+
+          <!-- Right content -->
+
+          <div class="col-lg-7 col-md-12 about-content">
+            <h5 class="about-title">► About me</h5>
+
+            <h1>Who Am I</h1>
+
+            <p>
+              My name is <span class="title">Roberto Villamer</span>, and I am a
+              Computer Engineering student at Naga College Foundation. I am a
+              motivated and detail-oriented developer with a strong foundation
+              in frontend web development, as well as programming in Java and
+              Python. I am passionate about the integration of design and
+              technology, and I enjoy building responsive, user-friendly
+              interfaces alongside developing efficient and functional software
+              solutions.
+            </p>
+
+            <div class="skills-box">
+              <div class="skill-item">
+                <i
+                  class="fa-brands fa-html5 skill-icon"
+                  style="color: #e34f26"
+                ></i>
+                HTML
+                <span class="tooltip-text"
+                  >Structuring web pages & semantic SEO</span
+                >
+              </div>
+
+              <div class="skill-item">
+                <i
+                  class="fa-brands fa-css3-alt skill-icon"
+                  style="color: #1572b6"
+                ></i>
+                CSS
+                <span class="tooltip-text"
+                  >Flexbox, Grid, Responsive Design & Animations</span
+                >
+              </div>
+
+              <div class="skill-item">
+                <i
+                  class="fa-brands fa-js skill-icon"
+                  style="color: #f7df1e"
+                ></i>
+                JavaScript
+                <span class="tooltip-text"
+                  >DOM Manipulation, ES6+, & Async Fetch APIs</span
+                >
+              </div>
+
+              <div class="skill-item">
+                <i
+                  class="fa-brands fa-python skill-icon"
+                  style="color: #3776ab"
+                ></i>
+                Python
+                <span class="tooltip-text"
+                  >Data Science, Scripting, Automation & Django</span
+                >
+              </div>
+
+              <div class="skill-item">
+                <i
+                  class="fa-brands fa-java skill-icon"
+                  style="color: #007396"
+                ></i>
+                Java
+                <span class="tooltip-text"
+                  >Object-Oriented Programming & Backend APIs</span
+                >
+              </div>
+
+              <div class="skill-item">
+                <span class="cpp-icon">C++</span> C++
+                <span class="tooltip-text"
+                  >System Architecture, Game Engines, & Performance</span
+                >
+              </div>
+            </div>
+
+            <button class="btn cv-btn">Projects</button>
+
+            <button id="like-btn" class="btn cv-btn like-cv-btn">
+              <i class="fa-regular fa-heart" id="like-icon"></i>
+              <span>Like</span>
+              <span id="like-count" class="badge">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section">
+      <div class="container">
+        <div class="services-header">
+          <h5>▶ My Services</h5>
+          <h1>What Can I Do</h1>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="icon">🌐</div>
+              <h3>Frontend Web Development</h3>
+              <p>
+                I can design and develop responsive websites using HTML, CSS,
+                JavaScript, and Bootstrap. I focus on creating user-friendly
+                interfaces that work well on both desktop and mobile devices.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="icon">⚙️</div>
+              <h3>Backend Development (Python)</h3>
+              <p>
+                I can develop basic backend systems using Python (Flask/Django),
+                including simple APIs, form handling, and database integration
+                for web applications.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="icon">☕</div>
+              <h3>Java Programming</h3>
+              <p>
+                I can create object-oriented applications using Java, including
+                console-based systems such as student records, inventory
+                management, and simple desktop applications.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="icon">💻</div>
+              <h3>C++ Programming</h3>
+              <p>
+                I can develop problem-solving programs using C++, focusing on
+                data structures, algorithms, and logical programming for
+                academic and practical projects.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="icon">🗄️</div>
+              <h3>Database Management</h3>
+              <p>
+                I can design and manage relational databases using MySQL, and
+                connect them to web applications for storing and retrieving data
+                efficiently.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="icon">🔗</div>
+              <h3>Basic Full-Stack Development</h3>
+              <p>
+                I can build simple full-stack projects combining frontend and
+                backend technologies such as login systems, registration forms,
+                and CRUD-based applications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="comment-section py-5">
+      <div class="container">
+        <div class="comment-header mb-4">
+          <h5>💬 Guest Book</h5>
+          <h1>Leave a Message</h1>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-5 mb-4">
+            <form id="comment-form" class="p-4 card-form-box">
+              <div class="form-group">
+                <label for="comment-name">Your Name</label>
+                <input
+                  type="text"
+                  id="comment-name"
+                  class="form-control"
+                  placeholder="Dev Rob (Optional)"
+                  max="40"
+                />
+              </div>
+              <div class="form-group">
+                <label for="comment-text">Message *</label>
+                <textarea
+                  id="comment-text"
+                  class="form-control"
+                  rows="4"
+                  placeholder="Write your thought here..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn submit-comment-btn w-100">
+                Post Comment
+              </button>
+            </form>
+          </div>
+
+          <div class="col-lg-7">
+            <div id="comments-stream" class="comments-scroll-area"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="static/js/script.js"></script>
+  </body>
+</html>
